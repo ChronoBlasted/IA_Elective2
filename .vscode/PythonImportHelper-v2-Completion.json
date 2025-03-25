@@ -1,0 +1,117 @@
+[
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "streamlit",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "streamlit",
+        "description": "streamlit",
+        "detail": "streamlit",
+        "documentation": {}
+    },
+    {
+        "label": "AutoModelForCausalLM",
+        "importPath": "transformers",
+        "description": "transformers",
+        "isExtraImport": true,
+        "detail": "transformers",
+        "documentation": {}
+    },
+    {
+        "label": "AutoTokenizer",
+        "importPath": "transformers",
+        "description": "transformers",
+        "isExtraImport": true,
+        "detail": "transformers",
+        "documentation": {}
+    },
+    {
+        "label": "os.environ['TF_ENABLE_ONEDNN_OPTS']",
+        "kind": 5,
+        "importPath": "ProjetB",
+        "description": "ProjetB",
+        "peekOfCode": "os.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'\ntokenizer = AutoTokenizer.from_pretrained(\"dbddv01/gpt2-french-small\")\nmodel = AutoModelForCausalLM.from_pretrained(\"dbddv01/gpt2-french-small\")\ntokenizer.pad_token = tokenizer.eos_token  \nmodel.config.pad_token_id = tokenizer.pad_token_id  \nst.title(\"🎮 Générateur de Description\")\nmax_length = st.slider(\"Longueur maximale de la description\", 50, 300, 150)\ntemperature = st.slider(\"Créativité\", 0.1, 1.5, 0.7)\nnum_beams = st.slider(\"Réflexion / Choix\", 1, 10, 3)\nst.write(\"Entrez une idée de jeu\")",
+        "detail": "ProjetB",
+        "documentation": {}
+    },
+    {
+        "label": "tokenizer",
+        "kind": 5,
+        "importPath": "ProjetB",
+        "description": "ProjetB",
+        "peekOfCode": "tokenizer = AutoTokenizer.from_pretrained(\"dbddv01/gpt2-french-small\")\nmodel = AutoModelForCausalLM.from_pretrained(\"dbddv01/gpt2-french-small\")\ntokenizer.pad_token = tokenizer.eos_token  \nmodel.config.pad_token_id = tokenizer.pad_token_id  \nst.title(\"🎮 Générateur de Description\")\nmax_length = st.slider(\"Longueur maximale de la description\", 50, 300, 150)\ntemperature = st.slider(\"Créativité\", 0.1, 1.5, 0.7)\nnum_beams = st.slider(\"Réflexion / Choix\", 1, 10, 3)\nst.write(\"Entrez une idée de jeu\")\nprompt_base = st.text_area(\"Décrivez brièvement votre jeu :\", \"Un jeu de rôle d'aventure dans un monde futuriste.\")",
+        "detail": "ProjetB",
+        "documentation": {}
+    },
+    {
+        "label": "model",
+        "kind": 5,
+        "importPath": "ProjetB",
+        "description": "ProjetB",
+        "peekOfCode": "model = AutoModelForCausalLM.from_pretrained(\"dbddv01/gpt2-french-small\")\ntokenizer.pad_token = tokenizer.eos_token  \nmodel.config.pad_token_id = tokenizer.pad_token_id  \nst.title(\"🎮 Générateur de Description\")\nmax_length = st.slider(\"Longueur maximale de la description\", 50, 300, 150)\ntemperature = st.slider(\"Créativité\", 0.1, 1.5, 0.7)\nnum_beams = st.slider(\"Réflexion / Choix\", 1, 10, 3)\nst.write(\"Entrez une idée de jeu\")\nprompt_base = st.text_area(\"Décrivez brièvement votre jeu :\", \"Un jeu de rôle d'aventure dans un monde futuriste.\")\nif st.button(\"Générer\"):",
+        "detail": "ProjetB",
+        "documentation": {}
+    },
+    {
+        "label": "tokenizer.pad_token",
+        "kind": 5,
+        "importPath": "ProjetB",
+        "description": "ProjetB",
+        "peekOfCode": "tokenizer.pad_token = tokenizer.eos_token  \nmodel.config.pad_token_id = tokenizer.pad_token_id  \nst.title(\"🎮 Générateur de Description\")\nmax_length = st.slider(\"Longueur maximale de la description\", 50, 300, 150)\ntemperature = st.slider(\"Créativité\", 0.1, 1.5, 0.7)\nnum_beams = st.slider(\"Réflexion / Choix\", 1, 10, 3)\nst.write(\"Entrez une idée de jeu\")\nprompt_base = st.text_area(\"Décrivez brièvement votre jeu :\", \"Un jeu de rôle d'aventure dans un monde futuriste.\")\nif st.button(\"Générer\"):\n    with st.spinner(\"Génération en cours...\"):",
+        "detail": "ProjetB",
+        "documentation": {}
+    },
+    {
+        "label": "model.config.pad_token_id",
+        "kind": 5,
+        "importPath": "ProjetB",
+        "description": "ProjetB",
+        "peekOfCode": "model.config.pad_token_id = tokenizer.pad_token_id  \nst.title(\"🎮 Générateur de Description\")\nmax_length = st.slider(\"Longueur maximale de la description\", 50, 300, 150)\ntemperature = st.slider(\"Créativité\", 0.1, 1.5, 0.7)\nnum_beams = st.slider(\"Réflexion / Choix\", 1, 10, 3)\nst.write(\"Entrez une idée de jeu\")\nprompt_base = st.text_area(\"Décrivez brièvement votre jeu :\", \"Un jeu de rôle d'aventure dans un monde futuriste.\")\nif st.button(\"Générer\"):\n    with st.spinner(\"Génération en cours...\"):\n        prompt_desc = f\"{prompt_base}\"",
+        "detail": "ProjetB",
+        "documentation": {}
+    },
+    {
+        "label": "max_length",
+        "kind": 5,
+        "importPath": "ProjetB",
+        "description": "ProjetB",
+        "peekOfCode": "max_length = st.slider(\"Longueur maximale de la description\", 50, 300, 150)\ntemperature = st.slider(\"Créativité\", 0.1, 1.5, 0.7)\nnum_beams = st.slider(\"Réflexion / Choix\", 1, 10, 3)\nst.write(\"Entrez une idée de jeu\")\nprompt_base = st.text_area(\"Décrivez brièvement votre jeu :\", \"Un jeu de rôle d'aventure dans un monde futuriste.\")\nif st.button(\"Générer\"):\n    with st.spinner(\"Génération en cours...\"):\n        prompt_desc = f\"{prompt_base}\"\n        input_ids = tokenizer.encode(prompt_desc, return_tensors=\"pt\")\n        attention_mask = (input_ids != tokenizer.pad_token_id).type(input_ids.dtype)",
+        "detail": "ProjetB",
+        "documentation": {}
+    },
+    {
+        "label": "temperature",
+        "kind": 5,
+        "importPath": "ProjetB",
+        "description": "ProjetB",
+        "peekOfCode": "temperature = st.slider(\"Créativité\", 0.1, 1.5, 0.7)\nnum_beams = st.slider(\"Réflexion / Choix\", 1, 10, 3)\nst.write(\"Entrez une idée de jeu\")\nprompt_base = st.text_area(\"Décrivez brièvement votre jeu :\", \"Un jeu de rôle d'aventure dans un monde futuriste.\")\nif st.button(\"Générer\"):\n    with st.spinner(\"Génération en cours...\"):\n        prompt_desc = f\"{prompt_base}\"\n        input_ids = tokenizer.encode(prompt_desc, return_tensors=\"pt\")\n        attention_mask = (input_ids != tokenizer.pad_token_id).type(input_ids.dtype)\n        output_desc = model.generate(",
+        "detail": "ProjetB",
+        "documentation": {}
+    },
+    {
+        "label": "num_beams",
+        "kind": 5,
+        "importPath": "ProjetB",
+        "description": "ProjetB",
+        "peekOfCode": "num_beams = st.slider(\"Réflexion / Choix\", 1, 10, 3)\nst.write(\"Entrez une idée de jeu\")\nprompt_base = st.text_area(\"Décrivez brièvement votre jeu :\", \"Un jeu de rôle d'aventure dans un monde futuriste.\")\nif st.button(\"Générer\"):\n    with st.spinner(\"Génération en cours...\"):\n        prompt_desc = f\"{prompt_base}\"\n        input_ids = tokenizer.encode(prompt_desc, return_tensors=\"pt\")\n        attention_mask = (input_ids != tokenizer.pad_token_id).type(input_ids.dtype)\n        output_desc = model.generate(\n            input_ids,",
+        "detail": "ProjetB",
+        "documentation": {}
+    },
+    {
+        "label": "prompt_base",
+        "kind": 5,
+        "importPath": "ProjetB",
+        "description": "ProjetB",
+        "peekOfCode": "prompt_base = st.text_area(\"Décrivez brièvement votre jeu :\", \"Un jeu de rôle d'aventure dans un monde futuriste.\")\nif st.button(\"Générer\"):\n    with st.spinner(\"Génération en cours...\"):\n        prompt_desc = f\"{prompt_base}\"\n        input_ids = tokenizer.encode(prompt_desc, return_tensors=\"pt\")\n        attention_mask = (input_ids != tokenizer.pad_token_id).type(input_ids.dtype)\n        output_desc = model.generate(\n            input_ids,\n            attention_mask=attention_mask, \n            max_length=max_length,",
+        "detail": "ProjetB",
+        "documentation": {}
+    }
+]
